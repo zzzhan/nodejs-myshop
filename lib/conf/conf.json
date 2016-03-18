@@ -1,0 +1,4 @@
+{
+"send_email":false,
+"user_verify_expired":86400000
+}

@@ -1,0 +1,12 @@
+<service>
+  <id>myshopnode</id>
+  <name>MyShop Node</name>
+  <description>nodejs-myshop</description>
+  <env name="MYSHOP_HOME" value="D:\zhan\github\nodejs-myshop\" />
+  <workingdirectory>%MYSHOP_HOME%</workingdirectory>
+  <executable>node</executable>
+  <argument>./bin/www</argument>
+  <logpath>%MYSHOP_HOME%windows</logpath>
+  <logmode>reset</logmode>
+  <depend></depend>
+</service>
