@@ -17,7 +17,8 @@ var express = require('express'),
 	user = require('./lib/routes/user'),
 	prod = require('./lib/routes/prod'),
 	txn = require('./lib/routes/txn'),
-	cust = require('./lib/routes/cust');
+	cust = require('./lib/routes/cust'),
+	type = require('./lib/routes/type');
 
 var app = express(),
   logDirectory = __dirname + '/log',
@@ -70,7 +71,8 @@ app.use('/auth', auth);
 app.use('/users', checkAuth, user);
 app.use('/prods', checkAuth, prod);
 app.use('/txns', checkAuth, txn);
-app.use('/cust', checkAuth, cust);
+app.use('/custs', checkAuth, cust);
+app.use('/types', checkAuth, type);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
